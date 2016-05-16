@@ -1,9 +1,5 @@
-<h2>Todos Template</h2>
+{{todo-input action="createTodo"}}
 
-<ul>
-	{{#each model as |todo|}}
-		<li>
-			{{todo.title}}
-		</li>
-	{{/each}}
-</ul>
+{{#todo-list todos=model deleteTodo="deleteTodo"}}
+    {{outlet}}
+{{/todo-list}}
